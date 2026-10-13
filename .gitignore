@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+/vendor/
+*.log
+.DS_Store
+
+# Local database credentials
+db.php

@@ -1,0 +1,170 @@
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ================================
+   NAVBAR CONTAINER
+================================ */
+
+.navbar-container {
+    max-width: 1200px;
+    min-height: 68px;
+
+    margin: 0 auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.logo {
+    color: #111827;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    letter-spacing: -0.3px;
+
+    transition: color 0.2s ease;
+}
+
+.logo:hover {
+    color: #6366f1;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-links a {
+    position: relative;
+
+    padding: 9px 13px;
+
+    color: #4b5563;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+    background: #eef2ff;
+}
+
+
+/* ================================
+   LOGOUT
+================================ */
+
+.nav-links a:last-child {
+    margin-left: 6px;
+
+    color: #dc2626;
+}
+
+.nav-links a:last-child:hover {
+    color: #b91c1c;
+    background: #fef2f2;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .navbar-container {
+        min-height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .nav-links a:last-child {
+        margin-left: 0;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 450px) {
+
+    .navbar-container {
+        padding: 14px 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    .nav-links a {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+}
+

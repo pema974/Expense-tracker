@@ -1,0 +1,664 @@
+/* ================================
+REPORTS PAGE
+================================ */
+
+.reports-container {
+max-width: 1200px;
+
+
+margin: 0 auto;
+
+padding: 40px 30px;
+
+
+}
+
+/* ================================
+PAGE HEADER
+================================ */
+
+.reports-container .dashboard-header {
+margin-bottom: 35px;
+}
+
+.reports-container .dashboard-header h1 {
+margin: 0 0 8px;
+
+
+font-size: 34px;
+font-weight: 700;
+
+color: #111827;
+
+
+}
+
+.reports-container .dashboard-header p {
+margin: 0;
+
+color: #6b7280;
+
+font-size: 16px;
+
+
+}
+
+/* ================================
+SUMMARY
+================================ */
+
+.report-summary {
+display: grid;
+
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 24px;
+
+margin-bottom: 40px;
+
+
+}
+
+.report-card {
+position: relative;
+
+
+padding: 26px;
+
+background: #ffffff;
+
+border: 1px solid #e5e7eb;
+
+border-radius: 16px;
+
+overflow: hidden;
+
+box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.04);
+
+transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+
+}
+
+.report-card:hover {
+transform: translateY(-4px);
+
+
+box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.08);
+
+
+}
+
+.report-card::before {
+content: "";
+
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 4px;
+
+
+}
+
+.report-card span {
+display: block;
+
+
+margin-bottom: 12px;
+
+font-size: 14px;
+
+font-weight: 600;
+
+color: #6b7280;
+
+
+}
+
+.report-card strong {
+font-size: 27px;
+
+
+font-weight: 700;
+
+
+}
+
+/* ================================
+SUMMARY COLORS
+================================ */
+
+.report-card.income-card::before {
+background: #16a34a;
+}
+
+.report-card.income-card strong {
+color: #15803d;
+}
+
+.report-card.expense-card::before {
+background: #dc2626;
+}
+
+.report-card.expense-card strong {
+color: #dc2626;
+}
+
+.report-card.balance-card::before {
+background: #6366f1;
+}
+
+.report-card.balance-card strong {
+color: #4f46e5;
+}
+
+/* ================================
+REPORT SECTION
+================================ */
+
+.report-section {
+margin-bottom: 30px;
+
+
+padding: 28px;
+
+background: #ffffff;
+
+border: 1px solid #e5e7eb;
+
+border-radius: 16px;
+
+box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.04);
+
+
+}
+
+.section-heading {
+margin-bottom: 25px;
+}
+
+.section-heading h2 {
+margin: 0 0 5px;
+
+
+font-size: 21px;
+
+color: #111827;
+
+
+}
+
+.section-heading p {
+margin: 0;
+
+
+font-size: 14px;
+
+color: #6b7280;
+
+
+}
+
+/* ================================
+CATEGORY REPORT
+================================ */
+
+.category-report {
+display: flex;
+
+
+flex-direction: column;
+
+gap: 22px;
+
+
+}
+
+.category-report-item {
+padding-bottom: 18px;
+
+
+border-bottom: 1px solid #f0f0f0;
+
+
+}
+
+.category-report-item:last-child {
+padding-bottom: 0;
+
+
+border-bottom: none;
+
+
+}
+
+.category-report-header {
+display: flex;
+
+
+align-items: center;
+
+justify-content: space-between;
+
+margin-bottom: 9px;
+
+
+}
+
+.category-report-header strong {
+color: #374151;
+
+
+font-size: 15px;
+
+
+}
+
+.category-report-header span {
+color: #111827;
+
+font-size: 14px;
+
+font-weight: 600;
+
+
+}
+
+/* ================================
+PROGRESS BAR
+================================ */
+
+.progress-bar {
+width: 100%;
+
+height: 9px;
+
+background: #f3f4f6;
+
+border-radius: 999px;
+
+overflow: hidden;
+
+
+}
+
+.progress-fill {
+height: 100%;
+
+
+min-width: 4px;
+
+background: #6366f1;
+
+border-radius: 999px;
+
+transition: width 0.4s ease;
+
+
+}
+
+.category-report-item small {
+display: block;
+
+
+margin-top: 6px;
+
+color: #9ca3af;
+
+font-size: 12px;
+
+
+}
+
+/* ================================
+MONTHLY REPORT
+================================ */
+
+.monthly-report {
+display: flex;
+
+
+flex-direction: column;
+
+
+}
+
+.monthly-item {
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 16px 0;
+
+border-bottom: 1px solid #f0f0f0;
+
+
+}
+
+.monthly-item:last-child {
+border-bottom: none;
+}
+
+.monthly-item span {
+color: #4b5563;
+
+
+font-size: 14px;
+
+font-weight: 600;
+
+
+}
+
+.monthly-item strong {
+color: #dc2626;
+
+
+font-size: 15px;
+
+
+}
+
+/* ================================
+EMPTY REPORT
+================================ */
+
+.empty-report {
+padding: 35px 20px;
+
+
+text-align: center;
+
+
+}
+
+.empty-report p {
+margin: 0 0 12px;
+
+color: #6b7280;
+
+
+}
+
+.empty-report a {
+color: #6366f1;
+
+
+font-size: 14px;
+
+font-weight: 600;
+
+text-decoration: none;
+
+
+}
+
+.empty-report a:hover {
+text-decoration: underline;
+}
+
+/* ================================
+TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+
+.reports-container {
+    padding: 30px 20px;
+}
+
+.report-summary {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+}
+
+
+}
+
+/* ================================
+MOBILE
+================================ */
+
+@media (max-width: 550px) {
+
+    .report-actions {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.export-button {
+    width: 100%;
+}
+
+
+.reports-container {
+    padding: 25px 15px;
+}
+
+.reports-container .dashboard-header h1 {
+    font-size: 28px;
+}
+
+.reports-container .dashboard-header p {
+    font-size: 14px;
+}
+
+.report-card {
+    padding: 23px;
+
+    border-radius: 14px;
+}
+
+.report-card strong {
+    font-size: 24px;
+}
+
+.report-section {
+    padding: 20px;
+
+    border-radius: 14px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+}
+
+.category-report-header span {
+    font-size: 13px;
+}
+
+.monthly-item {
+    gap: 15px;
+}
+
+
+}
+
+/* ================================
+   EXPENSE CHART
+================================ */
+
+.chart-section {
+    min-height: 420px;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ================================
+   REPORT FILTER
+================================ */
+
+.report-filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.report-filter form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.report-filter label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.report-filter select {
+    min-width: 170px;
+    padding: 11px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.report-filter select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.report-filter {
+    justify-content: stretch;
+}
+
+.report-filter form {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.report-filter select {
+    width: 100%;
+}
+
+/* ================================
+   REPORT ACTIONS
+================================ */
+
+.report-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.report-actions .report-filter {
+    margin-bottom: 0;
+}
+
+.export-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 11px 16px;
+
+    border-radius: 10px;
+
+    background: #111827;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.export-button:hover {
+    
+    background: #1f2937;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.10);
+}
+/* PDF EXPORT BUTTON */
+
+.pdf-button {
+    background: #374151;
+}
+
+.pdf-button:hover {
+    background: #4b5563;
+}
+
+
+/* ================================
+   PRINT REPORT
+================================ */
+
+@media print {
+
+    .navbar {
+        display: none;
+    }
+
+    .report-actions {
+        display: none;
+    }
+
+    .reports-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .reports-container .dashboard-header {
+        margin-bottom: 25px;
+    }
+
+    .report-card,
+    .report-section {
+        box-shadow: none;
+        border: 1px solid #dddddd;
+    }
+
+    .chart-section {
+        page-break-inside: avoid;
+    }
+
+    .report-section {
+        page-break-inside: avoid;
+    }
+
+    body {
+        background: #ffffff;
+    }
+}

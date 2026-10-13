@@ -1,0 +1,486 @@
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+
+/* ================================
+   DASHBOARD HEADER
+================================ */
+
+.dashboard-header {
+    margin-bottom: 35px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.dashboard-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+
+/* ================================
+   SUMMARY GRID
+================================ */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+
+/* ================================
+   SUMMARY CARD
+================================ */
+
+.summary-card {
+    position: relative;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   CARD TOP ACCENT
+================================ */
+
+.summary-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+}
+
+
+/* ================================
+   CARD TITLES
+================================ */
+
+.summary-card h3 {
+    margin: 0 0 18px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #6b7280;
+}
+
+
+/* ================================
+   AMOUNT
+================================ */
+
+.summary-card .amount {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ================================
+   INCOME
+================================ */
+
+.income-card {
+    border-top: none;
+}
+
+.income-card::before {
+    background: #16a34a;
+}
+
+.income-card .amount {
+    color: #15803d;
+}
+
+
+/* ================================
+   EXPENSE
+================================ */
+
+.expense-card {
+    border-top: none;
+}
+
+.expense-card::before {
+    background: #dc2626;
+}
+
+.expense-card .amount {
+    color: #dc2626;
+}
+
+
+/* ================================
+   BALANCE
+================================ */
+
+.balance-card {
+    border-top: none;
+}
+
+.balance-card::before {
+    background: #6366f1;
+}
+
+.balance-card .amount {
+    color: #4f46e5;
+}
+
+
+/* ================================
+   DASHBOARD DIVIDER
+================================ */
+
+body > hr {
+    max-width: 1200px;
+    margin: 10px auto 25px;
+
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* ================================
+   LOGOUT
+================================ */
+
+body > p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 30px;
+}
+
+body > p a {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background: #fef2f2;
+    color: #dc2626;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+body > p a:hover {
+    background: #fee2e2;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .dashboard-container {
+        padding: 30px 20px;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .summary-card .amount {
+        font-size: 27px;
+    }
+
+}
+
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
+
+@media (max-width: 550px) {
+
+    .dashboard-container {
+        padding: 25px 15px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-header p {
+        font-size: 14px;
+    }
+
+    .summary-card {
+        padding: 23px;
+        border-radius: 14px;
+    }
+
+    .summary-card .amount {
+        font-size: 25px;
+    }
+
+    body > hr {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    body > p {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
+/* ================================
+   RECENT TRANSACTIONS
+================================ */
+
+.recent-transactions {
+    margin-top: 40px;
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ================================
+   SECTION HEADER
+================================ */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.section-header h2 {
+    margin: 0 0 5px;
+
+    font-size: 21px;
+    color: #111827;
+}
+
+.section-header p {
+    margin: 0;
+
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+/* ================================
+   VIEW ALL BUTTON
+================================ */
+
+.view-all-btn {
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.view-all-btn:hover {
+    background: #e0e7ff;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   TRANSACTION LIST
+================================ */
+
+.recent-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================================
+   TRANSACTION ITEM
+================================ */
+
+.recent-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.recent-item:last-child {
+    border-bottom: none;
+}
+
+
+/* ================================
+   TRANSACTION INFO
+================================ */
+
+.recent-category {
+    margin-bottom: 4px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.recent-description {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.recent-date {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+
+/* ================================
+   TRANSACTION AMOUNT
+================================ */
+
+.recent-amount {
+    font-size: 16px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.recent-income {
+    color: #16a34a;
+}
+
+.recent-expense {
+    color: #dc2626;
+}
+
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.no-transactions {
+    padding: 35px 20px;
+
+    text-align: center;
+}
+
+.no-transactions p {
+    margin: 0 0 12px;
+
+    color: #6b7280;
+}
+
+.no-transactions a {
+    color: #6366f1;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.no-transactions a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .recent-transactions {
+        padding: 20px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .section-header h2 {
+        font-size: 19px;
+    }
+
+    .recent-item {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .recent-amount {
+        font-size: 14px;
+    }
+
+}
+

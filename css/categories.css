@@ -1,0 +1,128 @@
+/* ================================
+   CATEGORIES PAGE
+================================ */
+
+.categories-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+/* ================================
+   CATEGORY FORM
+================================ */
+
+.category-form {
+    margin: 25px 0 35px;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.category-form h2 {
+    margin: 0 0 20px;
+    color: #111827;
+}
+
+.category-form form {
+    display: flex;
+    gap: 12px;
+}
+
+.category-form input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.category-form input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.category-form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #6366f1;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.category-form button:hover {
+    background: #4f46e5;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   CATEGORY LIST
+================================ */
+
+.categories-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.category-item {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.category-item strong {
+    color: #374151;
+    font-size: 16px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .categories-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .categories-container {
+        padding: 20px 15px;
+    }
+
+    .category-form form {
+        flex-direction: column;
+    }
+
+    .category-form button {
+        width: 100%;
+    }
+
+    .categories-list {
+        grid-template-columns: 1fr;
+    }
+
+}
